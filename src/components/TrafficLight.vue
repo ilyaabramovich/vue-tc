@@ -37,13 +37,13 @@ export default {
   created() {
     setTimeout(
       () => this.$router.push({ path: this.getNextRoute }),
-      this.delay
+      this.delay * 1000
     );
   },
   updated() {
     setTimeout(
       () => this.$router.push({ path: this.getNextRoute }),
-      this.delay
+      this.delay * 1000
     );
   }
 };
