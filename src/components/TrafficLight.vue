@@ -1,11 +1,13 @@
 <template>
-  <div id="traffic-light">
-    <div class="traffic-light__lamp red" :class="{'red-active':this.$route.name === 'red'}"></div>
-    <div
-      class="traffic-light__lamp yellow"
-      :class="{'yellow-active':this.$route.name === 'yellow'}"
-    ></div>
-    <div class="traffic-light__lamp green" :class="{'green-active':this.$route.name === 'green'}"></div>
+  <div class="container">
+    <div id="traffic-light">
+      <div class="traffic-light__lamp red" :class="{'red-active':this.$route.name === 'red'}"></div>
+      <div
+        class="traffic-light__lamp yellow"
+        :class="{'yellow-active':this.$route.name === 'yellow'}"
+      ></div>
+      <div class="traffic-light__lamp green" :class="{'green-active':this.$route.name === 'green'}"></div>
+    </div>
   </div>
 </template>
 
@@ -50,6 +52,11 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.container {
+  display: flex;
+  height: 100vh;
+}
+
 #traffic-light {
   width: 140px;
   border-radius: 15px;
